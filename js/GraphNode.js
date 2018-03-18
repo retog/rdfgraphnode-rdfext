@@ -1,6 +1,5 @@
-var $rdf = require("rdflib");
+var $rdf = require("ext-rdflib");
 var fetch = require("node-fetch");
-var RDFaProcessor = require("./rdfa-processor-dirty-hack");
 
 /**
  * Node Status:
@@ -131,24 +130,13 @@ GraphNode.rdfFetch = function(uri, options, login) {
                     let graph = $rdf.graph();
                     let mediaType = response.headers.get("Content-type").split(";")[0];
                     return response.text().then(text => {
-                        if ((mediaType === "text/html")  && (typeof DOMParser !== 'undefined')) {
-                            console.log("Working around rdflib problem parsing RDFa in browser");
-                            try {
-                                RDFaProcessor.parseRDFaDOM($rdf.Util.parseXML(text, { contentType: mediaType }), graph, uri);
-                            } catch(error) {
+                        $rdf.parse(text, graph, uri, mediaType, (error, graph) => {
+                            if (error) {
                                 reject(error);
-                                return;
+                            } else {
+                                resolve(graph);
                             }
-                            resolve(graph);
-                        } else {
-                            $rdf.parse(text, graph, uri, mediaType, (error, graph) => {
-                                if (error) {
-                                    reject(error);
-                                } else {
-                                    resolve(graph);
-                                }
-                            });
-                        }
+                        });
                     });
                 });
                 return response;
