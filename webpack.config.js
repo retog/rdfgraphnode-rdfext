@@ -1,6 +1,7 @@
 // This library allows us to combine paths easily
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, 'js', 'GraphNode.js'),
@@ -29,5 +30,14 @@ module.exports = {
     'xmldom': 'window',
     'rdflib' : '$rdf'
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  plugins: [
+    new UglifyJSPlugin({
+      test: /\.js($|\?)/i,
+      sourceMap: true,
+      uglifyOptions: {
+          compress: true
+      }
+    }),
+  ]
 };
