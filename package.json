@@ -1,5 +1,5 @@
 {
-  "name": "rdfgraphnode",
+  "name": "rdfgraphnode-rdfext",
   "version": "1.2.3",
   "description": "Graph Traversal on top of rdflib.js",
   "main": "js/GraphNode.js",
