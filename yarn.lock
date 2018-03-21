@@ -2082,9 +2082,9 @@ express@^4.16.2:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-ext-rdflib@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/ext-rdflib/-/ext-rdflib-0.0.1.tgz#7c75597b59372c4e3dc46732e13718e08f699cfb"
+ext-rdflib@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ext-rdflib/-/ext-rdflib-0.0.2.tgz#219a3e15eaaae574b27a5957249ea6892be39814"
   dependencies:
     node-fetch "^1.7.3"
     rdf-ext "^1.1.0"
