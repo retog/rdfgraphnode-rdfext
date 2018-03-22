@@ -6,7 +6,7 @@ const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 module.exports = {
   entry: path.resolve(__dirname, 'js', 'GraphNode.js'),
   output: {
-    path: path.resolve(__dirname, 'distribution'),
+    path: path.resolve(__dirname, 'distribution', "latest"),
     filename: 'GraphNode.js',
     libraryTarget: 'var',
     library: 'GraphNode'
