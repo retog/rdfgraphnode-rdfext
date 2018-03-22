@@ -1,7 +1,7 @@
 # GraphNodeJS
-Graph Traversal on top of [rdf-ext](https://github.com/rdf-ext/rdf-ext).
+Graph Traversal on top of [rdf-ext](https://github.com/rdf-ext/rdf-ext) Using [ext-rdflib](https://github.com/retog/ext-rdflib)
 
-This is a fork of the original [rdfgraphnode](https://github.com/retog/rdfgraphnode) that is based on (https://github.com/linkeddata/rdflib.js). The functionality shouldbe identical.
+This is a fork of the original [rdfgraphnode](https://github.com/retog/rdfgraphnode) that is based on [rdflib.js](https://github.com/linkeddata/rdflib.js). The functionality should be identical.
 
 ## API
 
