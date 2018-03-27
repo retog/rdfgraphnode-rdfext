@@ -1,7 +1,16 @@
-# GraphNodeJS [![Build Status](https://travis-ci.org/retog/rdfgraphnode-rdfext.svg?branch=master)](https://travis-ci.org/retog/rdfgraphnode-rdfext)
+# rdfgraphnode [![Build Status](https://travis-ci.org/retog/rdfgraphnode-rdfext.svg?branch=master)](https://travis-ci.org/retog/rdfgraphnode-rdfext)
 Graph Traversal on top of [rdf-ext](https://github.com/rdf-ext/rdf-ext) Using [ext-rdflib](https://github.com/retog/ext-rdflib)
 
 This is a fork of the original [rdfgraphnode](https://github.com/retog/rdfgraphnode) that is based on [rdflib.js](https://github.com/linkeddata/rdflib.js). The functionality should be identical.
+
+## Usage
+
+rdfgraphnode can be used in the browser both with `rdflib.js` as well as `ext-rdflib`. The respective library must be loaded before rdfgraphnode.
+
+        <script src="https://retog.github.io/rdfgraphnode-rdfext/latest/GraphNode.js"></script>
+
+You may replace `latest` with the version of rdfgraphnode you want to use.
+
 
 ## API
 
