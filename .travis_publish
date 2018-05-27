@@ -6,7 +6,7 @@ pushd $HOME
 git clone --branch=$PUBLICATION_BRANCH https://${GITHUB_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git publish 2>&1 > /dev/null
 cd publish
 # Update pages
-cp -r $REPO_PATH/distribution .
+cp -r $REPO_PATH/distribution/* .
 # Commit and push latest version
 git add .
 git config user.name  "Travis"
