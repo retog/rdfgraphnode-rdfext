@@ -23,7 +23,7 @@ branches:
   except: 
     - gh-pages
 deploy:
-- provider: script
+  - provider: script
     script: bash .travis_publish
     on:
       tags: true
