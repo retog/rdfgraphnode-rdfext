@@ -34,8 +34,9 @@ A GraphNode has the following methods:
 - fetch()
 - each(f)
 - fetchEach(f)
+- split()
 
-The first three methods return a Promise for a GraphNode.The `each(f)`method invokes `f` once for every represented node with a GrahphNode representing that node as argument and returns a promise that is satisfied when all promises returned by f are resolved. The method `fetchEach(f)` is identical to `each(f)` but every node is fetched before being passed to `f`.
+The first three methods return a Promise for a GraphNode.The `each(f)`method invokes `f` once for every represented node with a GrahphNode representing that node as argument and returns a promise that is satisfied when all promises returned by f are resolved. The method `fetchEach(f)` is identical to `each(f)` but every node is fetched before being passed to `f`. The method `split` returns a GraphNode for every node in `nodes` 
 
 ## Example
 
