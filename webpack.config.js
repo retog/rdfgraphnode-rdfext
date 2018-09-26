@@ -30,14 +30,5 @@ module.exports = {
     'xmldom': 'window',
     'rdflib' : '$rdf'
   },
-  devtool: 'source-map',
-  plugins: [
-    new UglifyJSPlugin({
-      test: /\.js($|\?)/i,
-      sourceMap: true,
-      uglifyOptions: {
-          compress: true
-      }
-    }),
-  ]
+  devtool: 'source-map'
 };
