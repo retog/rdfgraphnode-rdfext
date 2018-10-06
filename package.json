@@ -7,7 +7,7 @@
   "author": "Reto Gmür <reto@factsmission.com>",
   "license": "MIT",
   "dependencies": {
-    "ext-rdflib": "^0.2.2",
+    "ext-rdflib": "^0.3.4",
     "node-fetch": "^2.2.0"
   },
   "scripts": {
