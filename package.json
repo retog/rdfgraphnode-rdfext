@@ -1,15 +1,15 @@
 {
   "name": "rdfgraphnode-rdfext",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Graph Traversal on top of rdflib.js",
   "main": "lib/GraphNode.js",
   "repository": "git@github.com:retog/GraphNodeJS.git",
   "author": "Reto Gmür <reto@factsmission.com>",
   "license": "MIT",
   "dependencies": {
+    "core-js": "^3.1.4",
     "ext-rdflib": "^0.4.2",
-    "node-fetch": "^2.2.0",
-    "core-js": "^3.1.4"
+    "node-fetch": "^2.2.0"
   },
   "scripts": {
     "prepublishOnly": "yarn && babel --no-babelrc js --out-dir lib -s --presets=@babel/preset-env",
