@@ -8,7 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "ext-rdflib": "^0.4.2",
-    "node-fetch": "^2.2.0"
+    "node-fetch": "^2.2.0",
+    "core-js": "^3.1.4"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha",
@@ -16,10 +17,11 @@
     "build": "cross-var \"webpack -p && ncp distribution/latest distribution/$npm_package_version\""
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-add-module-exports": "^1.0.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/register": "^7.4.4",
+    "babel-loader": "^8.0.6",
     "cross-var": "^1.1.0",
     "express": "^4.16.3",
     "fetch": "^1.1.0",
@@ -29,8 +31,8 @@
     "ncp": "^2.0.0",
     "style-loader": "^0.23.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.9"
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
   }
 }
