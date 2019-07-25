@@ -9,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'distribution', "latest"),
     filename: 'GraphNode.js',
     libraryTarget: 'var',
+    libraryExport: "default",
     library: 'GraphNode'
   },
   module: {

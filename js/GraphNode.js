@@ -1,5 +1,5 @@
-var $rdf = require("ext-rdflib");
-var fetch = require("node-fetch");
+import $rdf from "ext-rdflib";
+import fetch, { Headers as _Headers } from "node-fetch";
 
 /**
  * Node Status:
@@ -162,4 +162,4 @@ GraphNode.rdfFetch = function(uri, options, login) {
     });
 };
 
-module.exports = GraphNode;
+export default GraphNode;
