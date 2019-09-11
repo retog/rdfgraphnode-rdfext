@@ -115,51 +115,6 @@ GraphNode.Impl = class {
  *
  * @return {Promise<Response>} Response has a `graph`property with the rertived graph
  */
-GraphNode.rdfFetch = function(uri, options, login) {
-    function plainFetch(uri, init = {}) {
-        if (!init.headers) {
-            init.headers = new Headers();
-        }
-        if (!init.headers.get("Accept")) {
-            init.headers.set("Accept", "text/turtle;q=1, application/n-triples;q=.9, "+
-                "application/rdf+xml;q=.8, application/ld+json;q=.7, */*;q=.1");
-        }
-        return fetch(uri, init).then(response => {
-            if (response.ok) {
-                response.graph = () => new Promise((resolve, reject) => {
-                    let graph = $rdf.graph();
-                    let mediaType = response.headers.get("Content-type").split(";")[0];
-                    return response.text().then(text => {
-                        $rdf.parse(text, graph, uri, mediaType, (error, graph) => {
-                            if (error) {
-                                reject(error);
-                            } else {
-                                resolve(graph);
-                            }
-                        });
-                    });
-                });
-                return response;
-            } else {
-                return response;
-            }
-        });
-    };
-    var ggg = this;
-    return plainFetch(uri, options).then(function (response) {
-        if (response.status < 300) {
-            return response;
-        } else {
-            if (login && response.status === 401) {
-                console.log("Got 401 response, attempting to login");
-                return login().then(function () {
-                    return ggg.rdfFetch(uri, options);
-                });
-            } else {
-                return response;
-            }
-        }
-    });
-};
+GraphNode.rdfFetch = $rdf.rdfFetch;
 
 export default GraphNode;
